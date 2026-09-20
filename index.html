@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Vos 🌻 - 21 de Septiembre</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -204,8 +204,9 @@
             border-radius: 20px;
             font-family: 'Caveat', cursive;
             font-size: 1.6rem;
-            line-height: 1.3;
+            line-height: 1.35;
             animation: fadeIn 0.5s ease;
+            text-align: left;
         }
 
         @keyframes fadeIn {
@@ -270,8 +271,9 @@
         </button>
 
         <div class="letter-content" id="letterContent">
-            Como hoy es 21 de septiembre, quería regalarte estas flores amarillas digitales acompañadas de tus canciones favoritas. <br><br>
-            Gracias por iluminar mis días y por estar siempre a mi lado. ¡Sos súper especial para mí! ❤️🌻
+            Como hoy es 21 de septiembre, quería regalarte estas flores amarillas digitales acompañadas de estas canciones dedicadas.<br><br>
+            Gracias por iluminar mis días y por estar siempre a mi lado. ¡Sos súper especial para mí! ❤️🌻<br><br>
+            Se que no son tus canciones favoritas Pero de igual manera te las dedico jijiji , perdón por lo poco que puedo hacer por hoy :D
         </div>
     </div>
 
@@ -281,7 +283,6 @@
         let currentVideoSrc = null;
 
         function playVideo(videoFile, btnElement) {
-            // Remueve la clase activo de todos los botones
             document.querySelectorAll('.song-btn').forEach(btn => btn.classList.remove('active'));
 
             if (currentVideoSrc === videoFile && !videoPlayer.paused) {
@@ -289,7 +290,7 @@
                 currentVideoSrc = null;
             } else {
                 btnElement.classList.add('active');
-                videoWrapper.style.display = 'block'; // Muestra el cuadro de vídeo
+                videoWrapper.style.display = 'block';
                 videoPlayer.src = videoFile;
                 videoPlayer.play();
                 currentVideoSrc = videoFile;
@@ -321,4 +322,3 @@
     </script>
 </body>
 </html>
-
